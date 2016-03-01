@@ -1,7 +1,7 @@
 class RequestsController < ApplicationController
 
   # /:trap_id
-  def create 
+  def new 
 
   end 	
 
