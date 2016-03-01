@@ -10,7 +10,7 @@ class RequestsController < ApplicationController
 
   # /:trap_id/requests
   def index
-  	@requests = Request.where(:trap_name => params[:trap_id])	    
+  	@requests = Request.where(:trap_name => params[:trap_id]).order('created_at DESC')	    
   end	
 
   # /:trap_id/requests/:id

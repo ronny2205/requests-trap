@@ -1,8 +1,14 @@
-hello
+<h1> <%= @requests.first.trap_name %> </h1>
+ 
 
-
-
-<%= @requests.each do |req| %>
-  <%= req %>  
-  </br>
+<% @requests.each do |req| %>
+<%= req.request_info %>
+<!--
+  <% fields_arr = req.request_info.split(',') %> 
+  <% fields_arr.each do |field| %>
+    <%= field.split('=>')[0] %> : <%= field.split('=>')[1] %>
+   <br>
+  <% end %>
+-->
+  <br><br>
 <% end %> 
