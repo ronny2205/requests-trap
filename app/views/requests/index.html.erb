@@ -1,5 +1,5 @@
 <h1> Requests for <%= @requests.first.trap_name %> </h1>
- 
+ <br/><br/>
 
 <table>
   <tr>
@@ -22,7 +22,7 @@
       <td><%= req.method %></td>
       <td><%= req.scheme %></td>
       <td><%=  req.req_params %></td>
-      <td><%= link_to 'View the Request', request_path(req.trap_name, req) %></td>
+      <td><%= link_to 'View the Request', request_path(req.trap_name, req), :class => 'btn btn-primary btn-md' %></td>
       
     </tr>
 	<!--

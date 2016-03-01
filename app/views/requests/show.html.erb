@@ -13,4 +13,10 @@ Scheme: <%= @req.scheme %>
 Request parameters: <%= @req.req_params %>
 <br/><br/>
 
-View raw request: 
+
+
+<a href="#raw" class="btn btn-default" data-toggle="collapse">View raw request</a>
+
+<div id="raw" class="collapse">
+    <%= @req.request_info %>
+</div>
