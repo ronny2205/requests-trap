@@ -1,1 +1,16 @@
-shalom
+
+<h1> Request details </h1>
+<br/> <br/>
+Created at:  <%= @req.created_at.strftime("%F") %>, 
+<%= @req.created_at.strftime("%T") %>
+<br/><br/>
+Remote ip: <%= @req.remote_ip %>
+<br/><br/>
+Request method: <%= @req.method %>
+<br/><br/>
+Scheme: <%= @req.scheme %>
+<br/><br/>
+Request parameters: <%= @req.req_params %>
+<br/><br/>
+
+View raw request: 

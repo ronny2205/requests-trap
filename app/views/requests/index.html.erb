@@ -22,6 +22,7 @@
       <td><%= req.method %></td>
       <td><%= req.scheme %></td>
       <td><%=  req.req_params %></td>
+      <td><%= link_to 'View the Request', request_path(req.trap_name, req) %></td>
       
     </tr>
 	<!--
