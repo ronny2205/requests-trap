@@ -6,6 +6,10 @@ Rails.application.routes.draw do
   # root 'welcome#index'
   root 'instructions#index'
 
+  get '/:trap_id',            to: 'requests#create'
+  get '/:trap_id/requests',     to: 'requests#index', as: 'requests'
+  get '/:trap_id/requests/:id', to: 'requests#show',  as: 'request'
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
