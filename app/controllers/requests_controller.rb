@@ -2,10 +2,9 @@ class RequestsController < ApplicationController
 
   # Get a request to /:trap_id
   def new 
-  	#req = request.env["REQUEST_URI"]
-  	@new_request = Request.create(:trap_name => params[:trap_id], :request_info => request.env.headers)
-  	#new_request = Request.new trap_name: params[:trap_id], request_info: request.env
-
+  	@new_request = Request.create(:trap_name => params[:trap_id], :request_info => request.env, 
+  		:remote_ip => request.remote_ip, :method => request.method, :scheme => request.scheme, 
+  		:req_params => request.parameters)
   end 	
 
   # /:trap_id/requests

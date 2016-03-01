@@ -1,14 +1,37 @@
-<h1> <%= @requests.first.trap_name %> </h1>
+<h1> Requests for <%= @requests.first.trap_name %> </h1>
  
 
-<% @requests.each do |req| %>
-<%= req.request_info %>
-<!--
-  <% fields_arr = req.request_info.split(',') %> 
-  <% fields_arr.each do |field| %>
-    <%= field.split('=>')[0] %> : <%= field.split('=>')[1] %>
-   <br>
+<table>
+  <tr>
+    <th>Date</th>
+    <th>Time</th>
+    <th>Remote ip</th>
+    <th>Method</th>
+    <th>Scheme</th>
+    <th>Parameters</th>
+    <th></th>
+  </tr>
+
+  <% @requests.each do |req| %>
+    <tr>
+	
+
+	  <td><%= req.created_at.strftime("%F") %></td>
+	  <td><%= req.created_at.strftime("%T") %></td>
+	  <td><%= req.remote_ip %></td>
+      <td><%= req.method %></td>
+      <td><%= req.scheme %></td>
+      <td><%=  req.req_params %></td>
+      
+    </tr>
+	<!--
+	  <% fields_arr = req.request_info.split(',') %> 
+	  <% fields_arr.each do |field| %>
+	    <%= field.split('=>')[0] %> : <%= field.split('=>')[1] %>
+	   <br>
+	  <% end %>
+	-->
+	  
   <% end %>
--->
-  <br><br>
-<% end %> 
+
+</table>	 
