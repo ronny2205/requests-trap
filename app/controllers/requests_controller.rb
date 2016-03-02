@@ -6,6 +6,7 @@ class RequestsController < ApplicationController
   		:remote_ip => request.remote_ip, :method => request.method, :scheme => request.scheme, 
   		:req_params => request.parameters)
   	if new_request.save
+  	  Pusher.trigger("my_channel", 'new-request', foo: 'bar')	
       render :nothing => true, :status => 200
     else
       render :nothing => true, :status => 400
@@ -29,8 +30,4 @@ class RequestsController < ApplicationController
 	   render :text => "404 Not Found", :status => :not_found
 	 end
   end
-
-  private
-
-  	
 end

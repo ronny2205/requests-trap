@@ -1,3 +1,17 @@
+<script src="https://js.pusher.com/3.0/pusher.min.js"></script>
+  <script>
+    $(function() {
+	    var pusher = new Pusher('004cc2e8a2f14ac1cfd3', {
+	      encrypted: true
+	    });
+
+	    var channel = pusher.subscribe('my_channel');
+	    channel.bind('new-request', function(data) {
+	      location.reload(true);
+	    });
+	});    
+  </script>
+
 <h1 class="text-center"> Requests for <%= @requests.first.trap_name %> </h1>
  <br/><br/>
 
