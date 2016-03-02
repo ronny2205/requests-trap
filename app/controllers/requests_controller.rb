@@ -5,6 +5,7 @@ class RequestsController < ApplicationController
   	new_request = Request.create(:trap_name => params[:trap_id], :request_info => request.env, 
   		:remote_ip => request.remote_ip, :method => request.method, :scheme => request.scheme, 
   		:req_params => request.parameters)
+
   	if new_request.save
   	  Pusher.trigger("my_channel", 'new-request', foo: 'bar')	
       render :nothing => true, :status => 200
