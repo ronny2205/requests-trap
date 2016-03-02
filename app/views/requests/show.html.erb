@@ -1,21 +1,26 @@
 
-<h1> Request details </h1>
-<br/> <br/>
-Created at:  <%= @req.created_at.strftime("%F") %>, 
-<%= @req.created_at.strftime("%T") %>
-<br/><br/>
-Remote ip: <%= @req.remote_ip %>
-<br/><br/>
-Request method: <%= @req.method %>
-<br/><br/>
-Scheme: <%= @req.scheme %>
-<br/><br/>
-Request parameters: <%= @req.req_params %>
-<br/><br/>
+<h1 class="col-xs-11 col-xs-offset-1"> Request details </h1>
+<br class="clr" />
+<br/>
 
-
-<!-- The raw request, hidden by default -->
-<a href="#raw" class="btn btn-default" data-toggle="collapse">View raw request</a>
-<div id="raw" class="collapse">
-    <%= @req.request_info %>
-</div>
+<div class="booyah-box col-xs-6 col-xs-offset-1">
+	Created at:  <%= @req.created_at.strftime("%F") %>, 
+	<%= @req.created_at.strftime("%T") %>
+	<br/><br/>
+	Remote ip: <%= @req.remote_ip %>
+	<br/><br/>
+	Request method: <%= @req.method %>
+	<br/><br/>
+	Scheme: <%= @req.scheme %>
+	<br/><br/>
+	Request parameters: <%= @req.req_params %>
+</div>	
+<br class="clr" />
+<br/>
+<div class="col-xs-11 col-xs-offset-1">
+	<!-- The raw request, hidden by default -->
+	<a href="#raw" class="btn btn-default" data-toggle="collapse">View raw request</a>
+	<div id="raw" class="collapse">
+	    <%= @req.request_info %>
+	</div>
+</div>	
