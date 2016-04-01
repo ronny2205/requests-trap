@@ -9,13 +9,13 @@ The app is deployed at: https://requests-trap-ronny.herokuapp.com/
 
 Running the app:
 
-Send an http request to: 
+* Send an http request to: 
    https://requests-trap-ronny.herokuapp.com/[your prefered path]
 
-View the requests at:
+* View the requests at:
    https://requests-trap-ronny.herokuapp.com/[your prefered path]/requests
 
-To see a single request go to:
+* To see a single request go to:
    https://requests-trap-ronny.herokuapp.com/[your prefered path]/requests/:id   
 
 For example:
