@@ -7,7 +7,7 @@ A tool for capture and display HTTP requests, built with Ruby on Rails
 The app is deployed at: https://requests-trap-ronny.herokuapp.com/
 
 
- == Running the app:
+Running the app:
 
 Send an http request to: 
    https://requests-trap-ronny.herokuapp.com/[your prefered path]
