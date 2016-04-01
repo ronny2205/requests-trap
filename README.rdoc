@@ -2,4 +2,21 @@
 
 REQUESTS-TRAP
 
-A tool for capture and display HTTP requests
+A tool for capture and display HTTP requests, built with Ruby on Rails
+
+The app is deployed at: https://requests-trap-ronny.herokuapp.com/
+
+
+Running the app
+
+Send an http request to: 
+   https://requests-trap-ronny.herokuapp.com/[your prefered path]
+
+View the requests at:
+   https://requests-trap-ronny.herokuapp.com/[your prefered path]/requests
+
+To see a single request go to:
+   https://requests-trap-ronny.herokuapp.com/[your prefered path]/requests/:id   
+
+For example:
+If you send http requests to https://requests-trap-ronny.herokuapp.com/bears, you can see them at: https://requests-trap-ronny.herokuapp.com/bears/requests   
